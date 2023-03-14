@@ -1,11 +1,11 @@
 <div class="sidebarContaianer">
   <div class="sideBar">
-    <button (click)="menu()" class="items" active><img class="items-img" src="assets/sideBarIcons/items-green.png" alt=""></button>
-    <button (click)="tests()" active class="tests"><img class="tests-img" src="assets/sideBarIcons/Tests.png" alt=""></button>
-    <button class="testtakers"><img class="testtakers-img" src="assets/sideBarIcons/TestTakers.png" alt=""></button>
-    <button class="groups"><img class="groups-img" src="assets/sideBarIcons/Groups.png" alt=""></button>
-    <button class="deliveries"><img class="deliveries-img" src="assets/sideBarIcons/Deliveries.png" alt=""></button>
-    <button class="results"><img class="results-img" src="assets/sideBarIcons/Results.png" alt=""></button>
+    <button (click)="menu()"  class="items" ><img class="items-img"  [src]="source"  alt=""></button>
+    <button (click)="tests()" active class="tests"><img class="tests-img" [src]="source2" alt=""></button>
+    <button (click)="testtakers(1)" ngValue="1" class="testtakers"><img class="testtakers-img" [src]="source3" alt=""></button>
+    <button (click)="testtakers(2)" ngValue="2" class="groups"><img class="groups-img" [src]="source4" alt=""></button>
+    <button (click)="testtakers(3)" ngValue="3" class="deliveries"><img class="deliveries-img" [src]="source5" alt=""></button>
+    <button (click)="testtakers(4)" ngValue="4" class="results"><img class="results-img" [src]="source6" alt=""></button>
   </div>
   <div *ngIf="pencilb">
   <div class="sideBar expanded" [ngStyle]="expandedSideBar" *ngIf="expanded">
@@ -18,7 +18,7 @@
             <img
               src="../../../assets/common interaction Icons/Associate.png"
               alt="Associate"
-            />
+              (click)="orderint()"/>
             <img
               src="../../../assets/common interaction Icons/Choice.png"
               alt="Choice"
@@ -60,11 +60,11 @@
             <img
               src="../../../assets/common interaction Icons/Order.png"
               alt="Order"
-           (click)="orderint()" />
+            />
             <img
               src="../../../assets/common interaction Icons/Slider.png"
               alt="Slider"
-            />
+            (click)="sliderint()" />
           </div>
         </div>
       </div>

@@ -100,20 +100,20 @@ p img {
 }
 
 .items,.tests,.testtakers,.groups,.deliveries,.groups,.results{
-  max-width: 100px;
-  max-height: 90px;
+  max-width: 90px;
+  max-height: 80px;
   position: relative;
   top: -23px;
   padding: 0;
 
 }
+
 .items-img,.tests-img,.testtakers-img,.groups-img,.deliveries-img,.groups-img,.results-img{
   max-width: 90px;
-  min-height: 80px;
+  min-height:70px;
   min-width: 40px;
   min-height: 40px;
-
-
+  
 }
 #commonInteraction,#inlineInteraction,#graphicInteraction,#customInteraction{
   margin-left: 40px;

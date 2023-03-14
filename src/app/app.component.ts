@@ -17,7 +17,9 @@ export class AppComponent {
   hot:boolean=false
   match:boolean=false
   order:boolean=false
+  slider:boolean=false
   hide:boolean=false
+
   title = 'ZTAssessment';
   screen=1;
   @ViewChild(AdminHoverCardComponent) adminPanel!: AdminHoverCardComponent;
@@ -34,6 +36,7 @@ export class AppComponent {
     private service11:OnserviceService,
     private service12:OnserviceService,
     private service13:OnserviceService,
+    private service14:OnserviceService,
     
     ){
 
@@ -66,6 +69,9 @@ export class AppComponent {
     })
     this.service13.subject13.asObservable().subscribe((x:any)=>{
       this.order=x
+    })
+    this.service14.subject14.asObservable().subscribe((x:any)=>{
+      this.slider=x
     })
   }
   hid(){

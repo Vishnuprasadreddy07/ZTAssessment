@@ -2,13 +2,9 @@
 <div class="container"  *ngIf="Condition1" ng-app="">
    <div class="card" style="width: 45rem;"></div>
    <div class="card-header">
-      <div class="header-title">ORDER-INTERACTION
-         <div style="display: inline-flex;position: absolute;right: 30px;">
-         <div style="display: inline-flex;" class="que"><a style="cursor: pointer;">QUESTION</a></div>
-         <div style="display: inline-flex;" class="res"><a style="cursor: pointer;">RESPONSE</a></div>
-         <a type="button" (click)="dismissbox()"><img src="./assets/delete.png" class="delimg"></a>
-         </div>
-      </div>
+      <p class="header-title">ASSOCIATE INTERACTION
+         <span>QUESTION | RESPONSE | <a type="button" (click)="dismissbox()"><img src="./assets/delete.png"></a></span>
+      </p>
    </div>
    <div class="card-body">
       <div class="row mt-1">

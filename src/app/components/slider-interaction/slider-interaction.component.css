@@ -155,6 +155,9 @@ h5{
     height: 40px;
     margin: 22px;
   }
+.slider-value{
+  width: 200px;
+}
   
   .slider {
     position: absolute;

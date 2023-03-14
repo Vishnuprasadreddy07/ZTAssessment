@@ -18,7 +18,21 @@ export class SideBarComponent implements OnInit {
   graphicIntrxn: boolean = false;
   customIntrxn: boolean = false;
   dropp:boolean=false
-  itemimg:boolean=true
+ 
+
+  mnustyle1:boolean=false
+  mnustyle2:boolean=false
+  mnustyle3:boolean=false
+  mnustyle4:boolean=false
+ 
+ 
+  source:any="assets/sideBarIcons/items-green.png"
+  source2:any="assets/sideBarIcons/Tests.png"
+  source3:any="assets/sideBarIcons/TestTakers.png"
+  source4:any="assets/sideBarIcons/Groups.png"
+  source5:any="assets/sideBarIcons/Deliveries.png"
+  source6:any="assets/sideBarIcons/Results.png"
+
 
   newfolder:boolean=false
   dropDown:boolean=false
@@ -34,6 +48,9 @@ export class SideBarComponent implements OnInit {
   hot:boolean=false
   match:boolean=false
   order:boolean=false
+  slider:boolean=false
+  
+  
   
   constructor(private service1:OnserviceService,
     private service2:OnserviceService,
@@ -48,6 +65,8 @@ export class SideBarComponent implements OnInit {
     private service11:OnserviceService,
     private service12:OnserviceService,
     private service13:OnserviceService,
+    private service14:OnserviceService,
+    
     ) {}
     content3: any =  new Array(7); 
 
@@ -60,7 +79,8 @@ export class SideBarComponent implements OnInit {
       this.pencilf=x
       
     })
- for (let p = 0; p < this.content3.length; p++)this.content3[p]=false;
+ 
+   
     
   
 }
@@ -68,8 +88,9 @@ export class SideBarComponent implements OnInit {
   menu() {
     this.opened = !this.opened;
     //const expanded = document.querySelector('.expanded');
-    if (this.opened) {
-      
+    if (this.opened && (this.source="assets/sideBarIcons/items-green.png")) {
+      this.source="assets/sideBarIcons/itemschange.png"
+    
       this.expandedSideBar = {
         translate: '95%',
         transitionDuration: '600ms',
@@ -77,6 +98,7 @@ export class SideBarComponent implements OnInit {
         // display: 'block',
       };
     } else {
+      this.source="assets/sideBarIcons/items-green.png"
       this.expandedSideBar = {
         translate: '-80%',
         transitionDuration: '600ms',
@@ -85,6 +107,9 @@ export class SideBarComponent implements OnInit {
       //   this.expanded = !expanded;
       // }, 800);
     }
+   
+    
+
   }
  
 
@@ -93,7 +118,9 @@ export class SideBarComponent implements OnInit {
     this.opened_tests = !this.opened_tests;
     //const expanded = document.querySelector('.expanded');
 
-    if (this.opened_tests) {
+    if (this.opened_tests && (this.source2="assets/sideBarIcons/Tests.png")) {
+      this.source2="assets/sideBarIcons/testschange.png"
+  
       this.expandedSideBar_tests = {
         translate: '95%',
         transitionDuration: '600ms',
@@ -101,6 +128,7 @@ export class SideBarComponent implements OnInit {
         // display: 'block',
       };
     } else {
+      this.source2="assets/sideBarIcons/Tests.png"
       this.expandedSideBar_tests = {
         translate: '-80%',
         transitionDuration: '600ms',
@@ -109,6 +137,57 @@ export class SideBarComponent implements OnInit {
       //   this.expanded = !expanded;
       // }, 800);
     }
+  }
+  testtakers(e:any){
+    this.mnustyle1=!this.mnustyle1
+    if(this.mnustyle1 && (this.source3="assets/sideBarIcons/TestTakers.png") && (e==1)){
+      this.source3="assets/sideBarIcons/testtakerschange.png"
+      
+    }
+    else {
+   
+      this.source3="assets/sideBarIcons/TestTakers.png"
+      
+    }
+    this.mnustyle2= !this.mnustyle2
+    if(this.mnustyle2 && (this.source4="assets/sideBarIcons/Groups.png") && (e==2) ){
+    
+      this.source4="assets/sideBarIcons/groupschange.png"
+    
+    }
+    else{
+      this.source4="assets/sideBarIcons/Groups.png"
+      
+      
+    }
+  
+  }
+  groups(){
+   
+  
+  }
+  deliveries(){
+    this.mnustyle3=!this.mnustyle3
+    if(this.mnustyle3 && (this.source5="assets/sideBarIcons/Deliveries.png")){
+      this.source5="assets/sideBarIcons/deliverieschange.png"
+      
+    }
+    else{
+      this.source5="assets/sideBarIcons/Deliveries.png"
+    }
+  
+  }
+  results(){
+    this.mnustyle4=!this.mnustyle4
+    if(this.mnustyle4 && (this.source6="assets/sideBarIcons/Results.png")){
+      this.source6="assets/sideBarIcons/resultschange.png"
+     
+    }
+    else{
+      
+      this.source6="assets/sideBarIcons/Results.png"
+    }
+  
   }
 
   openCommonInteraction() {
@@ -164,6 +243,8 @@ export class SideBarComponent implements OnInit {
     this.service12.subject12.next(this.match)
     this.order=false
     this.service13.subject13.next(this.order)
+    this.slider=false
+    this.service14.subject14.next(this.slider)
 
   }
   external(){
@@ -181,6 +262,8 @@ export class SideBarComponent implements OnInit {
     this.service12.subject12.next(this.match)
     this.order=false
     this.service13.subject13.next(this.order)
+    this.slider=false
+    this.service14.subject14.next(this.slider)
   }
   fileupload(){
     this.file=true
@@ -197,6 +280,8 @@ export class SideBarComponent implements OnInit {
     this.service12.subject12.next(this.match)
     this.order=false
     this.service13.subject13.next(this.order)
+    this.slider=false
+    this.service14.subject14.next(this.slider)
     
   }
   gapMatch(){
@@ -214,6 +299,8 @@ export class SideBarComponent implements OnInit {
     this.service12.subject12.next(this.match)
     this.order=false
     this.service13.subject13.next(this.order)
+    this.slider=false
+    this.service14.subject14.next(this.slider)
 
   }
   hottext(){
@@ -231,6 +318,8 @@ export class SideBarComponent implements OnInit {
     this.service12.subject12.next(this.match)
     this.order=false
     this.service13.subject13.next(this.order)
+    this.slider=false
+    this.service14.subject14.next(this.slider)
   }
   matchint(){
     this.match=true
@@ -247,10 +336,32 @@ export class SideBarComponent implements OnInit {
     this.service7.subject7.next(this.choiceI)
     this.order=false
     this.service13.subject13.next(this.order)
+    this.slider=false
+    this.service14.subject14.next(this.slider)
     
   }
   orderint(){
     this.order=true
+    this.service13.subject13.next(this.order)
+    this.match=false
+    this.service12.subject12.next(this.match)
+    this.hot=false
+    this.service11.subject11.next(this.hot)
+    this.gap=false
+    this.service10.subject10.next(this.gap)
+    this.file=false
+    this.service9.subject9.next(this.file)
+    this.ext=false
+    this.service8.subject8.next(this.ext)
+    this.choiceI=false
+    this.service7.subject7.next(this.choiceI)
+    this.slider=false
+    this.service14.subject14.next(this.slider)
+  }
+  sliderint(){
+    this.slider=true
+    this.service14.subject14.next(this.slider)
+    this.order=false
     this.service13.subject13.next(this.order)
     this.match=false
     this.service12.subject12.next(this.match)
