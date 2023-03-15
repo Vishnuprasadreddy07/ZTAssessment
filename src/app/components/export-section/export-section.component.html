@@ -1,0 +1,232 @@
+<!-- SCREEN 1 -->
+<div class="content" *ngIf="Screen1">
+  <p class="imp">EXPORT</p>
+  <div class="card" style="width: 34rem;">
+    <div class="card-body">
+      <div class="row mt-0">
+        <p class="Formet">
+          SUPPORTED EXPORT FORMATS
+        </p>
+        <p class="impFormet">
+          Choose Export Formet
+        </p>     
+        <div class="checkbox">
+           <div class="mt-0">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; QTI Test
+              Package 2.2
+            </div>
+          </div>
+          <div class="mt-1">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; QTI Test
+              Package 2.1
+            </div>
+          </div>
+          <div class="mt-1">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; QTI Test Metadata
+            </div>
+          </div>
+          <div class="mt-1">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; RDF
+            </div>
+          </div>
+          <div class="impPara mt-3">
+            <p>
+              Export QTI 2.2 Test Package
+            </p>
+          </div>
+          <div class="uploadFile">
+            <div class="row">
+              <div class="col-md-3">
+                <b>File Name &nbsp;</b>
+              </div>
+              <div class="col-md-8">
+                <input type="text" class="form-control" [(ngModel)]="textType" (change)="inputChange()">
+              </div>
+            </div>
+          </div>
+          <div class="row items  mt-4">
+            <div class="col-md-2">
+              <b>Items</b>
+            </div>
+            <div class="col-md-10">
+              <div class="itemrow mt-1">
+                <div class="checkboxtwo col-md-1"></div>
+                <div class="col-md-11">
+                  <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; Select
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="import">
+        <a type="button" (click)="clickSecond()"><img src="./assets/export.png" height="32px"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN 2 -->
+<div class="content" *ngIf="Screen2">
+  <p class="imp">EXPORT</p>
+  <div class="card" style="width: 34rem;">
+    <div class="card-body">
+      <div class="row mt-0">
+        <p class="Formet">
+          SUPPORTED EXPORT FORMATS
+        </p>
+        <p class="impFormet">
+          Choose Export Formet
+        </p>
+        <div class="checkbox">
+          <div class="mt-0">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; QTI Test
+              Package 2.2
+            </div>
+          </div>
+          <div class="mt-1">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; QTI Test
+              Package 2.1
+            </div>
+          </div>
+          <div class="mt-1">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; QTI Test Metadata
+            </div>
+          </div>
+          <div class="mt-1">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; RDF
+            </div>
+          </div>
+          <div class="impPara mt-3">
+            <p>
+              Export QTI 2.2 Test Package
+            </p>
+          </div>
+          <div class="uploadFile">
+            <div class="row">
+              <div class="col-md-3">
+                <b>File Name &nbsp;</b>
+              </div>
+              <div class="col-md-8">
+                <input type="text" class="form-control" [(ngModel)]="textType">
+              </div>
+            </div>
+          </div>
+          <div class="row items  mt-4">
+            <div class="col-md-2">
+              <b>Items</b>
+            </div>
+            <div class="col-md-10">
+              <div class="itemrow mt-1">
+                <div class="checkboxtwo col-md-1"></div>
+                <div class="col-md-11">
+                  <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; {{textType}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="import">
+        <a type="button" (click)="clickThird()"><img src="./assets/export.png" height="32px"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN 3 -->
+<div class="content" *ngIf="Screen3">
+  <div class="box" *ngIf="exportFile">
+    <p class="successMsg"><img src="./assets/trick.png" height="22px">&nbsp;&nbsp;&nbsp; {{textType}} export
+      Successfully
+    </p>
+  </div>
+  <p class="imp">EXPORT</p>
+  <div class="card" style="width: 34rem;">
+    <div class="card-body">
+      <div class="row mt-0">
+        <p class="Formet">
+          SUPPORTED EXPORT FORMATS
+        </p>
+        <p class="impFormet">
+          Choose Export Formet
+        </p>
+        <div class="checkbox">
+          <div class="mt-0">
+            <div class="checkboxOne col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; QTI Test
+              Package 2.2
+            </div>
+          </div>
+          <div class="mt-1">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; QTI Test
+              Package 2.1
+            </div>
+          </div>
+          <div class="mt-1">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; QTI Test Metadata
+            </div>
+          </div>
+          <div class="mt-1">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; RDF
+            </div>
+          </div>
+          
+          <div class="impPara mt-3">
+            <p>
+              Export QTI 2.2 Test Package
+            </p>
+          </div>
+          <div class="uploadFile">
+            <div class="row">
+              <div class="col-md-3">
+                <b>File Name &nbsp;</b>
+              </div>
+              <div class="col-md-8">
+                <input type="text" class="form-control" [(ngModel)]="textType">
+              </div>
+            </div>
+          <div class="row items  mt-4">
+            <div class="col-md-2">
+              <b>Items</b>
+            </div>
+            <div class="col-md-10">
+              <div class="itemrow mt-1">
+                <div class="checkboxtwo col-md-1"></div>
+                <div class="col-md-11">
+                  <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; {{textType}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="import">
+        <a type="button"><img src="./assets/export.png" height="32px"></a>
+      </div>
+    </div>
+  </div>
+</div>

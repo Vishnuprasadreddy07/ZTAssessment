@@ -1,0 +1,152 @@
+.card {
+    margin: 5px 0 0 490px;
+    padding-bottom: 20px;
+    height: 500px;
+    border-radius: 12px;
+    border: 2.2px solid #0C747E;
+}
+
+.imp {
+    margin: 2.4rem 0 0.5rem 30.9rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.impFormet,
+.impPara {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.import img {
+    margin: 6rem 0 0 26rem;
+}
+
+.import2 img {
+    margin: 3rem 0 0 26rem;
+}
+
+.uploadFile {
+    margin-top: 30px;
+}
+
+.uploading,
+.uploading1,
+.uploading4,
+.uploading5,
+.fileText {
+    width: 100%;
+    color: #0C747E;
+    font-weight: 600;
+    border: 2px solid #0C747E;
+    border-radius: 7px;
+}
+
+.uploading {
+    margin: 0 2px 0 5px;
+    padding: 4px 18rem 4px 10px;
+}
+
+.uploading1 {
+    margin: 0 45px 0 5px;
+    padding: 4px 400px 4px 10px;
+}
+
+.uploading4 {
+    margin: 0 0 0 5px;
+    padding: 4px 17.5rem 4px 10px;
+}
+
+.uploading5 {
+    margin: 0 0 0 5px;
+    padding: 4px 9rem 4px 10px;
+}
+
+.fileText {
+    margin-top: 20px;
+    height: 11%;
+}
+
+.fileText2 {
+    margin-top: 15px;
+    width: 100%;
+    height: 30%;
+    border: 2px solid #0C747E;
+    border-radius: 7px;
+}
+
+.fileText2 .dragFile .or {
+    font-size: 14px;
+    color: #0C747E;
+    margin: 10px 0 0 0;
+    padding: 10px 0 0 242px;
+}
+
+.fileText2 .dragFile .drag {
+    font-size: 14px;
+    color: #0C747E;
+    margin: 10px 0 0 0;
+    padding: 0 0 0 209px;
+}
+
+.fileText .load {
+    margin: 0 100px 0 25px;
+    padding-top: 10px;
+}
+
+.fileText .load2 {
+    margin: 0 0 0 28rem;
+    padding-top: 10px;
+}
+
+.box {
+    height: 9%;
+    width: 35%;
+    margin: 0 0 3.2rem 32rem;
+    padding-bottom: 30px;
+    background-color: rgb(6, 206, 139);
+}
+
+.box p {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.impPara {
+    margin-top: 20px;
+}
+
+.successMsg {
+    margin: -75px 0 0 0;
+}
+
+.progress {
+    border: 2px solid #0C747E;
+}
+
+.toggle {
+    margin: 0 0 0 29rem;
+}
+
+select {
+    padding: 4px 25rem 4px 5px;
+    border: 2px solid #0C747E;
+    border-radius: 5px;
+}
+input[type=checkbox] {
+    visibility: hidden;
+}
+.checkboxOne,.checkboxtwo{
+    width: 15px;
+    height: 15px;
+    margin: 0 0 -19px 0;
+    position: relative;
+    border: 1px solid #0C747E;
+    border-radius: 3px;
+}
+.checkboxOne {
+    background: #0C747E; 
+}
+
+
+

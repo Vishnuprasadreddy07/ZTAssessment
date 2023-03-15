@@ -1,0 +1,326 @@
+<!-- FIRST SCREEN -->
+<div class="content" *ngIf="Screen1">
+  <p class="imp">IMPORT</p>
+  <div class="card" style="width: 34rem;">
+    <div class="card-body">
+      <div class="row mt-1 mb-3">
+        <p class="impFormet">
+          Choose Import Format
+        </p>
+        <div class="checkbox">
+          <div class="mt-2">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; QTI / APIP Test
+              Content Package
+            </div>
+          </div>
+          <div class="mt-2">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; RDF
+            </div>
+          </div>
+          <div class="mt-2">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp;CSV
+            </div>
+          </div>
+          <div class="impPara mt-3">
+            <p>
+              Import a QTI / APIP Test Content Package <br>
+              Add a Zip file containing QTI / APIP Test and Items
+            </p>
+          </div>
+          <div class="uploadFile">
+            <a type="button" (click)="uploader.click()"><img src="./assets/browse2.png" height="32px">
+              <input hidden type="file" #uploader (change)="uploadFile($event)" />
+            </a>
+            <span class="uploading1">
+              <ng-container *ngIf="selected">
+                1 File selected
+              </ng-container>
+            </span>
+          </div>
+          <div class="fileText">
+            <span class="load2">
+              <ng-container class="cross">
+                <a type="button"><img src="./assets/right.png" height="16px"></a>&nbsp;&nbsp;<a type="button"><img
+                    src="./assets/wrong.png" height="16px"></a>
+              </ng-container>
+            </span>
+          </div>
+          <div class="progress mt-3">
+            <div class="progress-bar  bg-success" role="progressbar" style="width: 0%" aria-valuenow="0"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+      <div class="import">
+        <a type="button"><img src="./assets/import.png" height="32px"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECOND SCREENS -->
+<div class="content" *ngIf="Screen2">
+  <p class="imp">IMPORT</p>
+  <div class="card" style="width: 34rem;">
+    <div class="card-body">
+      <div class="row mt-1 mb-3">
+        <p class="impFormet">
+          Choose Import Formet
+        </p>
+        <div class="checkbox">
+          <div class="mt-2">
+            <div class="checkboxOne col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; QTI / APIP Test
+              Content Package
+            </div>
+          </div>
+          <div class="mt-2">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; RDF
+            </div>
+          </div>
+          <div class="mt-2">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp;CSV
+            </div>
+          </div>
+          <div class="impPara mt-3">
+            <p>
+              Import a QTI / APIP Test Content Package <br>
+              Add a Zip file containing QTI / APIP Test and Items
+            </p>
+          </div>
+          <div class="uploadFile">
+            <a type="button"><img src="./assets/browse2.png" height="32px">
+              <input hidden type="file" #uploader (change)="uploadFile($event)" />
+            </a>
+            <span class="uploading">
+              1 File selected
+            </span>
+          </div>
+          <div class="fileText">
+            <span class="load">
+              <ng-container *ngIf="icons"><img src="./assets/files.png" height="16px">
+              </ng-container>&nbsp;&nbsp;{{fileUpload}}</span>&nbsp;&nbsp;
+
+            <ng-container class="cross" *ngIf="icons">
+              <a type="button"><img src="./assets/right.png" height="16px"></a>&nbsp;&nbsp;<a type="button"><img
+                  src="./assets/wrong.png" height="16px"></a>
+            </ng-container>
+          </div>
+          <div class="progress mt-3">
+            <div class="progress-bar  bg-success" role="progressbar" style="width: 0%" aria-valuenow="0"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+      <div class="import">
+        <a type="button" (click)="secondShow()"><img src="./assets/import.png" height="32px"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- THIRD SCREEN -->
+<div *ngIf="Screen3">
+  <div class="box" *ngIf="exportFile">
+    <p class="successMsg"><img src="./assets/trick.png" height="22px">&nbsp;&nbsp;&nbsp;{{fileUpload}} export
+      Successfully
+    </p>
+  </div>
+
+  <div class="content">
+    <p class="imp">IMPORT</p>
+    <div class="card" style="width: 34rem;">
+      <div class="card-body">
+        <div class="row mt-1 mb-3">
+          <p class="impFormet">
+            Choose Import Formet
+          </p>
+          <div class="checkbox">
+            <div class="mt-2">
+              <div class="checkboxOne col-md-1"></div>
+              <div class="col-md-11">
+                <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; QTI / APIP Test
+                Content Package
+              </div>
+            </div>
+            <div class="mt-2">
+              <div class="checkboxtwo col-md-1"></div>
+              <div class="col-md-11">
+                <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; RDF
+              </div>
+            </div>
+            <div class="mt-2">
+              <div class="checkboxtwo col-md-1"></div>
+              <div class="col-md-11">
+                <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp;CSV
+              </div>
+            </div>
+            <div class="impPara mt-3">
+              <p>
+                Import a QTI / APIP Test Content Package <br>
+                Add a Zip file containing QTI / APIP Test and Items
+              </p>
+            </div>
+            <div class="uploadFile">
+              <a type="button"><img src="./assets/browse2.png" height="32px">
+                <input hidden type="file" #uploader (change)="uploadFile($event)" />
+              </a>
+              <span class="uploading">
+                1 File selected
+              </span>
+            </div>
+            <div class="fileText">
+              <span class="load">
+                <ng-container *ngIf="icons"><img src="./assets/files.png" height="16px">
+                </ng-container>&nbsp;&nbsp;{{fileUpload}}</span>&nbsp;&nbsp;
+
+              <ng-container class="cross" *ngIf="icons">
+                <a type="button"><img src="./assets/right.png" height="16px"></a>&nbsp;&nbsp;<a type="button"><img
+                    src="./assets/wrong.png" height="16px"></a>
+              </ng-container>
+            </div>
+            <div class="progress mt-3">
+              <div class="progress-bar  bg-success" role="progressbar" style="width: 100%" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="import">
+          <a type="button" (click)="importForth()"><img src="./assets/import.png" height="32px"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- FORTH  SCREEN -->
+
+<div class="content" *ngIf="Screen4">
+  <p class="imp">IMPORT</p>
+  <div class="card" style="width: 34rem;">
+    <div class="card-body">
+      <div class="row mt-1 mb-3">
+        <p class="impFormet">
+          Choose Import Formet
+        </p>
+        <div class="checkbox">
+          <div class="mt-2">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; FILE
+            </div>
+          </div>
+          <div class="mt-2">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; PASSAGE
+            </div>
+          </div>
+          <div class="uploadFile">
+            <a type="button" (click)="uploadeFiles.click()"><img src="./assets/browse2.png" height="32px">
+              <input hidden type="file" #uploadeFiles (change)="uploadedFile($event)" />
+            </a>
+            <span class="uploading4">
+              No File selected
+            </span>
+          </div>
+          <div class="fileText2">
+            <span class="dragFile">
+              <p class="or"> OR</p>
+              <p class="drag"> Drag File Here</p>
+            </span>
+          </div>
+          <div class="progress mt-3">
+            <div class="progress-bar  bg-success" role="progressbar" style="width: 0%" aria-valuenow="0"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="form-group mt-3">
+            <div class="mb-3"><label for="college"><b>Assets Option:</b></label></div>
+            <select>
+              <option value="English">English</option>
+              <option value="UK English">UK English</option>
+              <option value="US English">US English</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="import2">
+        <a type="button"><img src="./assets/import.png" height="32px"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FIFTH SCREEN -->
+
+<div class="content" *ngIf="Screen5">
+  <p class="imp">IMPORT</p>
+  <div class="card" style="width: 34rem;">
+    <div class="card-body">
+      <div class="row mt-1 mb-3">
+        <p class="impFormet">
+          Choose Import Formet
+        </p>
+        <div class="checkbox">
+          <div class="mt-2">
+            <div class="checkboxOne col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; FILE
+            </div>
+          </div>
+          <div class="mt-2">
+            <div class="checkboxtwo col-md-1"></div>
+            <div class="col-md-11">
+              <input type="checkbox" value="1" id="checkboxOneInput" name="" />&nbsp;&nbsp;&nbsp; PASSAGE
+            </div>
+          </div>
+          <div class="uploadFile">
+            <a type="button"><img src="./assets/browse2.png" height="32px">
+              <input hidden type="file" #uploadeFiles (change)="uploadedFile($event)" />
+            </a>
+            <span class="uploading5">
+              {{filesAdd}}
+            </span>
+          </div>
+          <div class="fileText2">
+            <span class="dragFile">
+              <p class="or"> OR</p>
+              <p class="drag"> Drag File Here</p>
+            </span>
+          </div>
+          <div class="progress mt-3">
+            <div class="progress-bar  bg-success" role="progressbar" style="width: 100%" aria-valuenow="0"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="form-group mt-3">
+            <div class="mb-3"><label for="college"><b>Assets Option:</b></label></div>
+            <select>
+              <option value="English">English</option>
+              <option value="UK English">UK English</option>
+              <option value="US English">US English</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="import2">
+        <a type="button"><img src="./assets/import.png" height="32px"></a>
+      </div>
+    </div>
+  </div>
+</div>

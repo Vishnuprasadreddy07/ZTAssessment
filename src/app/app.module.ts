@@ -20,7 +20,7 @@ import { Ctm001002Component } from './components/ctm001002/ctm001002.component';
 import { ExtTextInteractionComponent } from './components/ext-text-interaction/ext-text-interaction.component';
 import { ChoiceBoxComponent } from './components/choice-box/choice-box.component';
 import { CardBoxComponent } from './components/card-box/card-box.component';
-import { AssociateInteractionComponent } from './associate-interaction/associate-interaction.component';
+import { AssociateInteractionComponent } from './components/associate-interaction/associate-interaction.component';
 
 
 @NgModule({

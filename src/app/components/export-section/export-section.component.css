@@ -1,0 +1,94 @@
+.card {
+    margin: 5px 0 0 490px;
+    padding-bottom: 20px;
+    height: 500px;
+    border-radius: 12px;
+    border: 2.2px solid #0C747E;
+}
+
+.imp {
+    margin: 2.4rem 0 0.5rem 30.9rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.impFormet,
+.impPara {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.Formet,
+.impPara {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.import img {
+    margin: 7rem 0 0 25.5rem;
+}
+
+.uploadFile {
+    margin-top: 30px;
+}
+
+.uploading1,
+.fileText {
+    width: 100%;
+    color: #0C747E;
+    font-weight: 600;
+    border: 2px solid #0C747E;
+    border-radius: 7px;
+}
+
+.uploading1 {
+    margin: 0 45px 0 30px;
+    padding: 4px 280px 4px 10px;
+}
+
+.box {
+    height: 9%;
+    width: 35%;
+    margin: 0 0 3.2rem 32rem;
+    padding-bottom: 30px;
+    background-color: rgb(6, 206, 139);
+}
+
+.box p {
+    text-align: center;
+    padding-top: 10px;
+}
+.successMsg {
+    margin: -75px 0 0 0;
+}
+
+select {
+    padding: 4px 25rem 4px 5px;
+    border: 2px solid #0C747E;
+    border-radius: 5px;
+}
+.col-md-8 input{
+    border: 2px solid #0C747E;
+}
+.col-md-3{
+    margin-top: 10px;
+}
+.itemrow {
+    margin-left: 45px;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+.checkboxOne,
+.checkboxtwo {
+    width: 15px;
+    height: 15px;
+    margin: 0 0 -19px 0;
+    position: relative;
+    border: 1px solid #0C747E;
+    border-radius: 3px;
+}
+.checkboxOne {
+    background: #0C747E;
+}
